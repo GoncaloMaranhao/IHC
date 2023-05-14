@@ -17,6 +17,19 @@
       android:exported="false"
       android:label="@string/title_activity_tarefa32" />
     <activity
+      android:name=".Tarefa25"
+      android:exported="false"
+      android:label="@string/title_activity_tarefa25" />
+    <activity
+      android:name=".Tarefa24"
+      android:exported="false"
+      android:label="@string/title_activity_tarefa24"
+      android:windowSoftInputMode="adjustPan" />
+    <activity
+      android:name=".Tarefa23"
+      android:exported="false"
+      android:label="@string/title_activity_tarefa23" />
+    <activity
       android:name=".Tarefa22"
       android:exported="false"
       android:label="@string/title_activity_tarefa22" />

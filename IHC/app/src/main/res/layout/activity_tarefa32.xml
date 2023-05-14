@@ -89,7 +89,6 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
-      android:layout_weight="1"
       android:backgroundTint="#6200EE"
       android:text="Clients Information"
       android:textSize="20dp"

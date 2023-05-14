@@ -8,21 +8,22 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.babbysitease.databinding.ActivityTarefa22Binding
+import com.example.babbysitease.databinding.ActivityTarefa23Binding
 
-class Tarefa22 : AppCompatActivity() {
+class Tarefa23 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTarefa22Binding
+    private lateinit var binding: ActivityTarefa23Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityTarefa22Binding.inflate(layoutInflater)
+        binding = ActivityTarefa23Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_tarefa22)
+        val navController = findNavController(R.id.nav_host_fragment_activity_tarefa23)
+
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
@@ -32,12 +33,12 @@ class Tarefa22 : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
       supportActionBar?.apply {
-        title = "Information"
+        title = "Allergies"
         setDisplayHomeAsUpEnabled(true)
       }
 
-      binding.allergiesAddButton.setOnClickListener {
-        val intent = Intent(this, Tarefa23::class.java)
+      binding.AddNewInformationButton.setOnClickListener {
+        val intent = Intent(this, Tarefa24::class.java)
         startActivity(intent)
       }
     }

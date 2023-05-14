@@ -39,7 +39,6 @@ class Tarefa21 : AppCompatActivity() {
         firstLetter1.text = client1Name.first().uppercase(Locale.getDefault())
         firstLetter2.text = client2Name.first().uppercase(Locale.getDefault())
 
-
         binding.clientInfoButton.setOnClickListener {
             val intent = Intent(this, Tarefa22::class.java)
             startActivity(intent)

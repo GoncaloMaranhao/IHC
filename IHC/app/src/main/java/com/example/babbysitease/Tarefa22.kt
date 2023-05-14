@@ -1,5 +1,6 @@
 package com.example.babbysitease
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -29,5 +30,15 @@ class Tarefa22 : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+      supportActionBar?.apply {
+        title = "Information"
+        setDisplayHomeAsUpEnabled(true)
+      }
+
+      binding.allergiesAddButton.setOnClickListener {
+        val intent = Intent(this, Tarefa23::class.java)
+        startActivity(intent)
+      }
     }
 }

@@ -70,6 +70,11 @@ class Tarefa24 : AppCompatActivity() {
       title = "Allergies"
       setDisplayHomeAsUpEnabled(true)
     }
-
+  }
+  override fun onSupportNavigateUp(): Boolean {
+    val intent = Intent(this, Tarefa23::class.java)
+    startActivity(intent)
+    finish()
+    return true
   }
 }

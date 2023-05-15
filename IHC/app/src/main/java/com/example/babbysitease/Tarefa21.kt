@@ -45,9 +45,10 @@ class Tarefa21 : AppCompatActivity() {
         }
     }
 
-    // Handle click on the back button in the ActionBar
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
+  override fun onSupportNavigateUp(): Boolean {
+    val intent = Intent(this, Tarefa32::class.java)
+    startActivity(intent)
+    finish()
+    return true
+  }
 }

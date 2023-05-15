@@ -2,6 +2,8 @@ package com.example.babbysitease
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -43,6 +45,24 @@ class Tarefa21 : AppCompatActivity() {
             val intent = Intent(this, Tarefa22::class.java)
             startActivity(intent)
         }
+
+      binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String?): Boolean {
+          return false
+        }
+
+        override fun onQueryTextChange(newText: String?): Boolean {
+          if (newText != null) {
+            binding.clientAna.visibility = if (newText.lowercase().contains("a")) View.VISIBLE else View.GONE
+            binding.clientCatarina.visibility = if (newText.lowercase().contains("c")) View.VISIBLE else View.GONE
+          } else {
+            binding.clientAna.visibility = View.VISIBLE
+            binding.clientCatarina.visibility = View.VISIBLE
+          }
+          return false
+        }
+      })
+
     }
 
   override fun onSupportNavigateUp(): Boolean {

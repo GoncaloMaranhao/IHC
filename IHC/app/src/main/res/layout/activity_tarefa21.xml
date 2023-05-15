@@ -44,6 +44,7 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clientAna"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp">
@@ -88,6 +89,7 @@
 
             <!-- Second client -->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clientCatarina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp">

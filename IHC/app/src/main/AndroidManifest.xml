@@ -21,6 +21,14 @@
       android:exported="false"
       android:label="@string/title_activity_tarefa32" />
     <activity
+      android:name=".Tarefa33"
+      android:exported="false"
+      android:label="@string/title_activity_tarefa33" />
+    <activity
+      android:name=".Tarefa34"
+      android:exported="false"
+      android:label="@string/title_activity_tarefa34" />
+    <activity
       android:name=".Tarefa25"
       android:exported="false"
       android:label="@string/title_activity_tarefa25" />

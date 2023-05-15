@@ -17,36 +17,32 @@ class Tarefa32 : AppCompatActivity() {
     private lateinit var binding: ActivityTarefa32Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+      super.onCreate(savedInstanceState)
 
-        binding = ActivityTarefa32Binding.inflate(layoutInflater)
-        setContentView(binding.root)
+      binding = ActivityTarefa32Binding.inflate(layoutInflater)
+      setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+      val navView: BottomNavigationView = binding.navView
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_tarefa32)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
+      val navController = findNavController(R.id.nav_host_fragment_activity_tarefa32)
+      // Passing each menu ID as a set of Ids because each
+      // menu should be considered as top level destinations.
+      val appBarConfiguration = AppBarConfiguration(
+        setOf(
+          R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+      )
+      setupActionBarWithNavController(navController, appBarConfiguration)
+      navView.setupWithNavController(navController)
 
-      supportActionBar?.apply{
+      supportActionBar?.apply {
         setDisplayHomeAsUpEnabled(true)
       }
 
-      val btnConversations = binding.root.findViewById<Button>(R.id.btn_clients_information)
-      btnConversations.setOnClickListener {
-        val intent = Intent(this, Tarefa21::class.java)
-        startActivity(intent)
-      }
-      binding.btn_conversations.setOnClickListener {
+      binding.btnConversations.setOnClickListener {
         val intent = Intent(this, Tarefa33::class.java)
         startActivity(intent)
+      }
 
     }
 }

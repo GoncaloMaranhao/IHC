@@ -34,5 +34,5 @@ private lateinit var binding: ActivityTarefa33Binding
           setDisplayHomeAsUpEnabled(true)
       }
     }
-    }
+}
 

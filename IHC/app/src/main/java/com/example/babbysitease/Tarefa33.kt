@@ -38,8 +38,8 @@ private lateinit var binding: ActivityTarefa33Binding
           setDisplayHomeAsUpEnabled(true)
       }
 
-      val client1Name = "Joao"
-      val client2Name = "Carlos"
+      val client1Name = "Ana"
+      val client2Name = "Catarina"
 
       val firstLetter1: TextView = binding.firstLetter1
       val firstLetter2: TextView = binding.firstLetter2

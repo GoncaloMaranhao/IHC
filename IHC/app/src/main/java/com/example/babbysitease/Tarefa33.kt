@@ -28,5 +28,11 @@ private lateinit var binding: ActivityTarefa33Binding
             R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+      supportActionBar?.apply {
+        title = "Conversations"
+          setDisplayHomeAsUpEnabled(true)
+      }
     }
-}
+    }
+

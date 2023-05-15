@@ -142,11 +142,19 @@
                     android:text="Peanuts"
                     android:textSize="20sp" />
 
+              <TextView
+                android:id="@+id/allergiesText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/allergiesText"
+                android:text="Cats"
+                android:textSize="20sp" />
+
                 <Button
                     android:id="@+id/allergiesAddButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/allergiesText"
+                    android:layout_below="@id/allergiesText2"
                     android:text="+Add" />
 
             </RelativeLayout>

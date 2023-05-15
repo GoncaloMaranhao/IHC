@@ -1,5 +1,6 @@
 package com.example.babbysitease
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -27,12 +28,14 @@ class Tarefa11 : AppCompatActivity(), OnClickListener {
     }
 
     private fun addAllAppointments(view: ScrollView) {
-        TODO("Add children to ScrollView")
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.newAppointmentButton -> TODO("Navigate to Tarefa 12")
+            R.id.newAppointmentButton -> {
+                val intent = Intent(this, Tarefa12::class.java)
+                navigateUpTo(intent)
+            }
             else -> {}
         }
     }

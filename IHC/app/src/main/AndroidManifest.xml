@@ -13,6 +13,10 @@
     android:theme="@style/Theme.BabbySitEase"
     tools:targetApi="31">
     <activity
+      android:name=".Tarefa26"
+      android:exported="false"
+      android:label="@string/title_activity_tarefa26" />
+    <activity
       android:name=".Tarefa32"
       android:exported="false"
       android:label="@string/title_activity_tarefa32" />

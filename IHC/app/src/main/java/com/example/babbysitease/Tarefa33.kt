@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -37,8 +38,8 @@ private lateinit var binding: ActivityTarefa33Binding
           setDisplayHomeAsUpEnabled(true)
       }
 
-      val client1Name = "Ana"
-      val client2Name = "Catarina"
+      val client1Name = "Joao"
+      val client2Name = "Carlos"
 
       val firstLetter1: TextView = binding.firstLetter1
       val firstLetter2: TextView = binding.firstLetter2
@@ -46,11 +47,44 @@ private lateinit var binding: ActivityTarefa33Binding
       firstLetter1.text = client1Name.first().uppercase(Locale.getDefault())
       firstLetter2.text = client2Name.first().uppercase(Locale.getDefault())
 
+      firstLetter1.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+      firstLetter2.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+
       binding.clientInfoButton.setOnClickListener {
         val intent = Intent(this, Tarefa34::class.java)
         startActivity(intent)
       }
 
+      navView.setOnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+          R.id.navigation_home -> {
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_dashboard -> {
+            navController.navigate(R.id.navigation_dashboard)
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_notifications -> {
+            navController.navigate(R.id.navigation_notifications)
+            val intent = Intent(this, Tarefa33::class.java)
+            startActivity(intent)
+            true
+          }
+          else -> false
+        }
+      }
+
     }
+
+  override fun onSupportNavigateUp(): Boolean {
+    val intent = Intent(this, MainActivity::class.java)
+    startActivity(intent)
+    finish()
+    return true
+  }
 }
 

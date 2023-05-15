@@ -1,6 +1,8 @@
 package com.example.babbysitease
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -8,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.babbysitease.databinding.ActivityTarefa33Binding
+import java.util.Locale
 
 class Tarefa33 : AppCompatActivity() {
 
@@ -33,6 +36,21 @@ private lateinit var binding: ActivityTarefa33Binding
         title = "Conversations"
           setDisplayHomeAsUpEnabled(true)
       }
+
+      val client1Name = "Ana"
+      val client2Name = "Catarina"
+
+      val firstLetter1: TextView = binding.firstLetter1
+      val firstLetter2: TextView = binding.firstLetter2
+
+      firstLetter1.text = client1Name.first().uppercase(Locale.getDefault())
+      firstLetter2.text = client2Name.first().uppercase(Locale.getDefault())
+
+      binding.clientInfoButton.setOnClickListener {
+        val intent = Intent(this, Tarefa34::class.java)
+        startActivity(intent)
+      }
+
     }
 }
 

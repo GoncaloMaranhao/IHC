@@ -1,6 +1,7 @@
 package com.example.babbysitease
 
 import android.os.Bundle
+import android.widget.EditText
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,5 +32,13 @@ class Tarefa34 : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+      supportActionBar?.apply {
+
+        title = "João/Sofia"
+        setDisplayHomeAsUpEnabled(true)
+
+      }
+
     }
 }

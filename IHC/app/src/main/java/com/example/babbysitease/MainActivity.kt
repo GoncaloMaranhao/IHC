@@ -35,5 +35,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Tarefa32::class.java)
             startActivity(intent)
         }
+
+
     }
 }

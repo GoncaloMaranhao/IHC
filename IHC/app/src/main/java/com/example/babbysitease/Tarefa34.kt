@@ -1,5 +1,6 @@
 package com.example.babbysitease
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -38,6 +39,11 @@ class Tarefa34 : AppCompatActivity() {
         title = "João/Sofia"
         setDisplayHomeAsUpEnabled(true)
 
+      }
+
+      binding.sendbutton.setOnClickListener {
+        val intent = Intent(this, Tarefa35::class.java)
+        startActivity(intent)
       }
 
     }

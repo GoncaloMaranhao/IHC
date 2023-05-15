@@ -69,6 +69,14 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/first_letter1" />
 
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintBottom_toBottomOf="@id/imageView">
+
         <Button
           android:id="@+id/clientInfoButton"
           android:layout_width="288dp"
@@ -79,21 +87,22 @@
           android:gravity="start|center_vertical"
           android:text="Child: Ana \n Parents: João/Sofia"
           android:textSize="16sp"
-          app:layout_constraintStart_toEndOf="@id/imageView"
-          app:layout_constraintTop_toTopOf="@id/imageView" />
+           />
 
         <ImageButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          android:layout_marginLeft="16dp"
-          android:layout_marginTop="16dp"
-          android:background="#0A38D1"
+          android:id="@+id/imageButton"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_marginRight="16dp"
+          android:background="@color/green"
           android:scaleType="centerInside"
           android:src="@drawable/baseline_local_phone_24"
           app:layout_constraintStart_toEndOf="@id/clientInfoButton"
-          app:layout_constraintTop_toTopOf="@id/clientInfoButton" />
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent" />
 
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
       </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -126,36 +135,44 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/first_letter2" />
 
-
-        <Button
-          android:id="@+id/clientInfoButton2"
-          android:layout_width="288dp"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="8dp"
-          android:layout_marginLeft="8dp"
-          android:drawableLeft="@drawable/baseline_chat_24"
-          android:gravity="start|center_vertical"
-          android:text="Child: Catarina \n Parents: Carlos/Sofia"
-          android:textSize="16sp"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.0"
-          app:layout_constraintStart_toEndOf="@id/imageView2"
-          app:layout_constraintTop_toTopOf="@id/imageView2" />
-
-        <ImageButton
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/button_layout2"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          android:layout_marginLeft="16dp"
-          android:layout_marginTop="16dp"
-          android:background="#0A38D1"
-          android:scaleType="centerInside"
-          android:src="@drawable/baseline_local_phone_24"
-          app:layout_constraintStart_toEndOf="@id/clientInfoButton2"
-          app:layout_constraintTop_toTopOf="@id/clientInfoButton2" />
+          android:layout_height="0dp"
+          app:layout_constraintStart_toEndOf="@id/imageView2"
+          app:layout_constraintTop_toTopOf="@id/imageView2"
+          app:layout_constraintBottom_toBottomOf="@id/imageView2">
 
+          <Button
+            android:id="@+id/clientInfoButton2"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:drawableLeft="@drawable/baseline_chat_24"
+            android:gravity="start|center_vertical"
+            android:text="Child: Catarina \n Parents: Carlos/Sofia"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageButton2" />
+
+          <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/green"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_local_phone_24"
+            app:layout_constraintStart_toEndOf="@id/clientInfoButton2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
       </androidx.constraintlayout.widget.ConstraintLayout>
+
 
       <View
         android:layout_width="match_parent"

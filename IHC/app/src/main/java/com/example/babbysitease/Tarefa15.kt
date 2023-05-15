@@ -1,6 +1,10 @@
 package com.example.babbysitease
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.View.OnClickListener
+import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,7 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.babbysitease.databinding.ActivityTarefa15Binding
 
-class Tarefa15 : AppCompatActivity() {
+class Tarefa15 : AppCompatActivity(), OnClickListener {
 
     private lateinit var binding: ActivityTarefa15Binding
 
@@ -31,5 +35,50 @@ class Tarefa15 : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        navView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    val intent = Intent(this, Tarefa32::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_dashboard -> {
+                    navController.navigate(R.id.navigation_dashboard)
+                    val intent = Intent(this, Tarefa32::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_notifications -> {
+                    navController.navigate(R.id.navigation_notifications)
+                    val intent = Intent(this, Tarefa33::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+        supportActionBar?.apply {
+            title = "Schedule"
+            setDisplayHomeAsUpEnabled(true)
+        }
+
+        findViewById<Button>(R.id.scheduleAnAppointmentButton).setOnClickListener(this)
     }
+
+    override fun onClick(view: View?) {
+        when (view?.id) {
+            R.id.scheduleAnAppointmentButton -> {
+                val intent = Intent(this, Tarefa11::class.java)
+                startActivity(intent)
+            }
+            else -> {}
+        }
+    }
+
+
 }

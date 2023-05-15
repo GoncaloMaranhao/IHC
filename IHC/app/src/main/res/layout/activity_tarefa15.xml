@@ -49,41 +49,79 @@
             android:layout_marginRight="0dp"
             android:background="@color/white" />
 
-        <TextView
-            android:id="@+id/textView"
-            style="@android:style/Widget.DeviceDefault.Light.TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="33dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
             android:layout_below="@+id/calendarView"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="125dp"
-            android:layout_marginEnd="98dp"
-            android:layout_marginRight="98dp"
-            android:text="No appointments Scheduled"
-            android:textColor="@color/white"
-            android:textIsSelectable="false"
-            android:gravity="center"/>
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="279dp"
+                android:layout_marginRight="279dp"
+                android:layout_marginBottom="67dp"
+                android:text="João/Sofia"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="142dp"
+                android:layout_marginRight="142dp"
+                android:layout_marginBottom="11dp"
+                android:text="Address: Av. Lourenço Peixinho, 53"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="318dp"
+                android:layout_marginRight="318dp"
+                android:layout_marginBottom="41dp"
+                android:text="Child: Ana"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/scheduleAnAppointmentButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
+            android:layout_alignBottom="@+id/calendarView"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="122dp"
-            android:layout_marginLeft="122dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginLeft="129dp"
             android:layout_marginTop="129dp"
-            android:layout_marginEnd="127dp"
-            android:layout_marginRight="127dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="-349dp"
             android:text="Schedule an Appointment" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

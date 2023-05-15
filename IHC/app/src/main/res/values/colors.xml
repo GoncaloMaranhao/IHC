@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
+    <color name="light_purple">#D1C4E9</color>
+    <color name="pastel_blue">#BBDEFB</color>
+    <color name="bronze">#CD7F32</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
@@ -35,7 +38,7 @@
     <color name="dark_orange">#FF8C00</color>
     <color name="coral">#FF7F50</color>
     <color name="tomato">#FF6347</color>
-    <color name="orange_red">#FF4500</color>
+    <color name="orange_red">#FF4500</color>´
     <color name="red">#FF0000</color>
     <color name="firebrick">#B22222</color>
     <color name="dark_red">#8B0000</color>
@@ -82,4 +85,16 @@
     <color name="goldenrod">#DAA520</color>
     <color name="dark_goldenrod">#B8860B</color>
     <color name="peru">#CD853F</color>
+    <color name="light_gold">#FFEBCD</color>
+    <color name="dark_gold">#EEBC1D</color>
+    <color name="pale_gold">#FFF8DC</color>
+    <color name="rich_gold">#D4AF37</color>
+    <color name="deep_gold">#B8860B</color>
+    <color name="metallic_gold">#D3AF37</color>
+    <color name="royal_gold">#DAA520</color>
+    <color name="soft_gold">#E6BE8A</color>
+    <color name="rose_gold">#B76E79</color>
+    <color name="gold123">#FFC107</color>
+    <color name="topBar">#07393C</color>
+    <color name="topBar2">#F0EDEE</color>
 </resources>

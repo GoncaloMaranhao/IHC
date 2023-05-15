@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient_background"
     android:layout_height="match_parent">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -69,6 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name: Ana Mendes"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
 
@@ -77,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Age: 5 "
+            android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
         </LinearLayout>
@@ -95,6 +98,7 @@
                     android:id="@+id/parentsLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                  android:textColor="@color/white"
                     android:text="Parents: João Carvalho \n                Sofia Sousa"
                     android:textSize="20sp" />
 
@@ -106,6 +110,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="108dp"
                     android:layout_marginRight="108dp"
+                  android:backgroundTint="@color/maroon"
                     android:text="Chat" />
 
             </RelativeLayout>
@@ -131,6 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/allergiesEditButton"
+                    android:textColor="@color/white"
                     android:text="Allergies:"
                     android:textSize="20sp" />
 
@@ -140,6 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/allergiesLabel"
                     android:text="Peanuts"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
               <TextView
@@ -148,6 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/allergiesText"
                 android:text="Cats"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
                 <Button
@@ -176,6 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/FavouriteActivitesEditButton"
                     android:text="Favourite Activites:"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
@@ -184,6 +193,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/FavouriteActivitesLabel"
                     android:text="Running"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <Button

@@ -6,24 +6,24 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
-import androidx.navigation.Navigation
 
-class Tarefa12 : AppCompatActivity(), OnClickListener {
-
+class Tarefa14 : AppCompatActivity(), OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tarefa12)
+        setContentView(R.layout.activity_tarefa14)
 
         supportActionBar?.apply {
-            title = "New Schedule"
+            title = "New schedule"
             setDisplayHomeAsUpEnabled(true)
         }
+        findViewById<Button>(R.id.submitAppointment).setOnClickListener(this)
+
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.selectClientTextView -> {
-                val intent = Intent(this, Tarefa13::class.java)
+            R.id.submitAppointment -> {
+                val intent = Intent(this, Tarefa15::class.java)
                 startActivity(intent)
             }
             else -> {}

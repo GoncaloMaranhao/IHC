@@ -1,40 +1,77 @@
 package com.example.babbysitease
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
-import android.widget.Button
-import android.widget.ScrollView
-
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.babbysitease.databinding.ActivityTarefa11Binding
 
 class Tarefa11 : AppCompatActivity(), OnClickListener {
-    private lateinit var preferences: SharedPreferences
-    private lateinit var scrollView: ScrollView
-    private lateinit var newAppointmentButton: Button
+
+    private lateinit var binding: ActivityTarefa11Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tarefa11)
 
-        preferences = applicationContext.getSharedPreferences("my_preferences", MODE_PRIVATE)
-        scrollView = findViewById(R.id.appointmentsScrollView)
-        newAppointmentButton = findViewById((R.id.newAppointmentButton))
-        newAppointmentButton.setOnClickListener(this)
+        binding = ActivityTarefa11Binding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        addAllAppointments(scrollView)
-    }
+        val navView: BottomNavigationView = binding.navView
 
-    private fun addAllAppointments(view: ScrollView) {
+        val navController = findNavController(R.id.nav_host_fragment_activity_tarefa11)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+
+        navView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    val intent = Intent(this, Tarefa32::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_dashboard -> {
+                    navController.navigate(R.id.navigation_dashboard)
+                    val intent = Intent(this, Tarefa32::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_notifications -> {
+                    navController.navigate(R.id.navigation_notifications)
+                    val intent = Intent(this, Tarefa33::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+        supportActionBar?.apply {
+            title = "Schedule"
+            setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.newAppointmentButton -> {
+            R.id.scheduleAnAppointmentButton -> {
                 val intent = Intent(this, Tarefa12::class.java)
-                navigateUpTo(intent)
+                startActivity(intent)
             }
             else -> {}
         }

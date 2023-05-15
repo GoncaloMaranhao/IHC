@@ -81,7 +81,7 @@ private lateinit var binding: ActivityTarefa33Binding
     }
 
   override fun onSupportNavigateUp(): Boolean {
-    val intent = Intent(this, MainActivity::class.java)
+    val intent = Intent(this, Tarefa32::class.java)
     startActivity(intent)
     finish()
     return true

@@ -24,8 +24,6 @@ class Tarefa34 : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_tarefa34)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
@@ -35,16 +33,42 @@ class Tarefa34 : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
       supportActionBar?.apply {
-
         title = "João/Sofia"
         setDisplayHomeAsUpEnabled(true)
+      }
 
+      navView.setOnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+          R.id.navigation_home -> {
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_dashboard -> {
+            navController.navigate(R.id.navigation_dashboard)
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_notifications -> {
+            navController.navigate(R.id.navigation_notifications)
+            val intent = Intent(this, Tarefa33::class.java)
+            startActivity(intent)
+            true
+          }
+          else -> false
+        }
       }
 
       binding.sendbutton.setOnClickListener {
         val intent = Intent(this, Tarefa35::class.java)
         startActivity(intent)
       }
-
     }
+  override fun onSupportNavigateUp(): Boolean {
+    val intent = Intent(this, Tarefa33::class.java)
+    startActivity(intent)
+    finish()
+    return true
+  }
 }

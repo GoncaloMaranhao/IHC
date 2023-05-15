@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">BabbySitEase</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">Schedule</string>
+    <string name="title_notifications">Conversations</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_tarefa11">Tarefa11</string>
     <string name="scrollView_description">Appointments</string>
     <string name="title_activity_tarefa21">Tarefa21</string>
     <string name="title_activity_tarefa22">Tarefa22</string>

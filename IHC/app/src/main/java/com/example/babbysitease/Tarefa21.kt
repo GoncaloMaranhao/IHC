@@ -64,16 +64,16 @@ class Tarefa21 : AppCompatActivity() {
       }
 
       val button = findViewById<Button>(R.id.clientInfoButton2)
-      val text = "Child: Catarina \n Parents: Carlos/Sofia"
+      val text = "Child: Catarina Mendes \n Parents: Carlos/Sofia"
       val spannable = SpannableString(text)
       spannable.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
       button.text = spannable
 
       val button2 = findViewById<Button>(R.id.clientInfoButton)
-      val text2 = "Child: Ana \n Parents: João/Sofia"
+      val text2 = "Child: Ana Carvalho \n Parents: João/Sofia"
       val spannable2 = SpannableString(text2)
       spannable2.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-      button2.text = spannable
+      button2.text = spannable2
 
         val client1Name = "Ana"
         val client2Name = "Catarina"

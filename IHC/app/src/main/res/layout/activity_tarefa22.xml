@@ -82,13 +82,10 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
+
         </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/black" />
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -110,7 +107,6 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="108dp"
                     android:layout_marginRight="108dp"
-                  android:backgroundTint="@color/maroon"
                     android:text="Chat" />
 
             </RelativeLayout>
@@ -118,26 +114,23 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/black" />
+                android:layout_marginTop="5dp"
+                android:background="@color/sky_blue" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
 
-                <ImageButton
-                    android:id="@+id/allergiesEditButton"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/pencil" />
+
 
                 <TextView
                     android:id="@+id/allergiesLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/allergiesEditButton"
                     android:textColor="@color/white"
-                    android:text="Allergies:"
+                    android:text="Allergies"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -145,7 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/allergiesLabel"
-                    android:text="Peanuts"
+                    android:text="- Peanuts"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -154,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/allergiesText"
-                android:text="Cats"
+                android:text="- Cats"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -163,7 +156,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/allergiesText2"
-                    android:text="+Add" />
+                    android:text="+Add / Edit" />
+
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/allergiesAddButton"
+                android:background="@color/sky_blue" />
 
             </RelativeLayout>
 
@@ -172,19 +171,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
 
-                <ImageButton
-                    android:id="@+id/FavouriteActivitesEditButton"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/pencil" />
 
                 <TextView
                     android:id="@+id/FavouriteActivitesLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/FavouriteActivitesEditButton"
-                    android:text="Favourite Activites:"
+                    android:text="Favourite Activites"
                     android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -192,7 +186,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/FavouriteActivitesLabel"
-                    android:text="Running"
+                    android:text="- Running"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -201,7 +195,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/FavouriteActivitesText"
-                    android:text="+Add" />
+                    android:text="+Add / EDit" />
+
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/FavouriteActivitesAddButton"
+                android:background="@color/sky_blue" />
 
             </RelativeLayout>
 

@@ -55,11 +55,13 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Peanuts"
+          android:textColor="@color/white"
           android:textSize="24sp" />
 
         <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:textColor="@color/white"
           android:text="Ana's parents communicated to me that she has a severe allergy to peanuts, I must take care with regard to the food that I prepare for her"
           android:textSize="18sp" />
 
@@ -96,12 +98,14 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Cats"
+          android:textColor="@color/white"
           android:textSize="24sp" />
 
         <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="No description"
+          android:textColor="@color/white"
           android:textSize="18sp" />
       </LinearLayout>
 
@@ -138,12 +142,14 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Insects"
+          android:textColor="@color/white"
           android:textSize="24sp" />
 
         <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="No description"
+          android:textColor="@color/white"
           android:textSize="18sp" />
       </LinearLayout>
 

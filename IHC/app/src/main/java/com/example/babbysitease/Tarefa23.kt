@@ -41,5 +41,12 @@ class Tarefa23 : AppCompatActivity() {
         val intent = Intent(this, Tarefa24::class.java)
         startActivity(intent)
       }
+
     }
+  override fun onSupportNavigateUp(): Boolean {
+    val intent = Intent(this, Tarefa22::class.java)
+    startActivity(intent)
+    finish()
+    return true
+  }
 }

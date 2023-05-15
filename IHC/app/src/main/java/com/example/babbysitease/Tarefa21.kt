@@ -1,8 +1,14 @@
 package com.example.babbysitease
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.View
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -10,6 +16,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.babbysitease.databinding.ActivityTarefa21Binding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import java.util.Locale
 
 class Tarefa21 : AppCompatActivity() {
@@ -19,7 +26,8 @@ class Tarefa21 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityTarefa21Binding.inflate(layoutInflater)
+
+      binding = ActivityTarefa21Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.apply {
@@ -55,6 +63,18 @@ class Tarefa21 : AppCompatActivity() {
         }
       }
 
+      val button = findViewById<Button>(R.id.clientInfoButton2)
+      val text = "Child: Catarina \n Parents: Carlos/Sofia"
+      val spannable = SpannableString(text)
+      spannable.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+      button.text = spannable
+
+      val button2 = findViewById<Button>(R.id.clientInfoButton)
+      val text2 = "Child: Ana \n Parents: João/Sofia"
+      val spannable2 = SpannableString(text2)
+      spannable2.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+      button2.text = spannable
+
         val client1Name = "Ana"
         val client2Name = "Catarina"
 
@@ -63,6 +83,10 @@ class Tarefa21 : AppCompatActivity() {
 
         firstLetter1.text = client1Name.first().uppercase(Locale.getDefault())
         firstLetter2.text = client2Name.first().uppercase(Locale.getDefault())
+
+        firstLetter1.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+        firstLetter2.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+
 
         binding.clientInfoButton.setOnClickListener {
             val intent = Intent(this, Tarefa22::class.java)

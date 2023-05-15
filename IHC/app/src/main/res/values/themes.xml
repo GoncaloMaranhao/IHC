@@ -14,4 +14,11 @@
         <!-- Customize your theme here. -->
         <item name="colorControlActivated">@color/white</item>
     </style>
+  <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+    <item name="android:theme">@style/MySearchViewThemeOverlay</item>
+  </style>
+
+  <style name="MySearchViewThemeOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="colorControlNormal">@color/white</item>
+  </style>
 </resources>

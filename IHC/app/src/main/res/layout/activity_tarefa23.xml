@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation4" />
 
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -60,15 +60,24 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textColor="@color/white"
+          android:layout_marginLeft="5dp"
           android:text="Ana's parents communicated to me that she has a severe allergy to peanuts, I must take care with regard to the food that I prepare for her"
           android:textSize="18sp" />
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:background="@color/sky_blue" />
 
       </LinearLayout>
 
       <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pencil" />
+        android:src="@drawable/pencil_white" />
 
     </LinearLayout>
 
@@ -77,7 +86,7 @@
       android:layout_height="1dp"
       android:background="#000" />
 
-    <!-- Repeat the above layout for the second instance -->
+    <!-- Second instance -->
 
     <LinearLayout
       android:layout_width="match_parent"
@@ -103,15 +112,24 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textColor="@color/white"
+          android:layout_marginLeft="5dp"
           android:text="No description"
           android:textSize="18sp" />
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:background="@color/sky_blue" />
 
       </LinearLayout>
 
       <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pencil" />
+        android:src="@drawable/pencil_white" />
 
     </LinearLayout>
 

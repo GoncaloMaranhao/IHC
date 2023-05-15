@@ -31,6 +31,29 @@ class Tarefa22 : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+      navView.setOnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+          R.id.navigation_home -> {
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_dashboard -> {
+            navController.navigate(R.id.navigation_dashboard)
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_notifications -> {
+            navController.navigate(R.id.navigation_notifications)
+            val intent = Intent(this, Tarefa33::class.java)
+            startActivity(intent)
+            true
+          }
+          else -> false
+        }
+      }
+
       supportActionBar?.apply {
         title = "Information"
         setDisplayHomeAsUpEnabled(true)

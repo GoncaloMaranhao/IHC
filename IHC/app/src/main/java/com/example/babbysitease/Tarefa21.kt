@@ -32,6 +32,29 @@ class Tarefa21 : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_tarefa21)
         navView.setupWithNavController(navController)
 
+      navView.setOnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+          R.id.navigation_home -> {
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_dashboard -> {
+            navController.navigate(R.id.navigation_dashboard)
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_notifications -> {
+            navController.navigate(R.id.navigation_notifications)
+            val intent = Intent(this, Tarefa33::class.java)
+            startActivity(intent)
+            true
+          }
+          else -> false
+        }
+      }
+
         val client1Name = "Ana"
         val client2Name = "Catarina"
 

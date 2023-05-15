@@ -52,7 +52,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Beatriz Silva"
-      android:textColor="#000"
+      android:textColor="@color/white"
       android:layout_below="@+id/imageview_profile"
       android:layout_centerHorizontal="true"
       android:textStyle = "bold"
@@ -65,8 +65,15 @@
       android:layout_height="4dp"
       android:layout_below="@+id/profile_name"
       android:layout_marginTop="16dp"
-      android:background="#6200EE"
-      />
+      android:background="@color/sky_blue" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:background="@color/sky_blue" />
 
     <Button
       android:id="@+id/btn_work_schedule"
@@ -78,7 +85,6 @@
       android:layout_marginTop="40dp"
       android:layout_marginEnd="16dp"
       android:layout_weight="1"
-      android:backgroundTint="#6200EE"
       android:text="Work Schedule"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_calendar_month_24"/>
@@ -92,7 +98,6 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
-      android:backgroundTint="#6200EE"
       android:text="Clients Information"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_people_24"/>
@@ -107,7 +112,6 @@
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
       android:layout_weight="1"
-      android:backgroundTint="#6200ee"
       android:text="Conversations"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_chat_24"/>
@@ -122,7 +126,6 @@
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
       android:layout_weight="1"
-      android:backgroundTint="#6200ee"
       android:text="Profile Information"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_info_24"/>
@@ -137,7 +140,6 @@
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
       android:layout_weight="1"
-      android:backgroundTint="#6200ee"
       android:text="Logout"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_exit_to_app_24"/>

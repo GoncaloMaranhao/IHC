@@ -16,7 +16,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="Welcome to BabysitEase"
         android:textColor="@color/white"
@@ -34,7 +34,7 @@
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/baseline_person_24"
-        android:hint="Username"
+        android:hint="beatrizSilva16"
         android:padding="20dp"
         android:textColor="@android:color/white"
         android:textColorHint="@color/white"
@@ -52,7 +52,7 @@
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/baseline_lock_24"
-        android:hint="Password"
+        android:hint="**********"
         android:padding="20dp"
         android:textColor="@android:color/white"
         android:textColorHint="@color/white"
@@ -88,11 +88,24 @@
         android:text="Forgot your Password?"
         android:textColor="@color/white"/>
 
+  <TextView
+    android:id="@+id/register"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/forgotpassword"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    android:text="SIGN UP"
+    android:textColor="@color/white"/>
+
     <Button
         android:id="@+id/btn_signin_google"
         android:layout_width="209dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/forgotpassword"
+        android:layout_below="@id/register"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="16dp"

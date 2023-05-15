@@ -45,4 +45,10 @@ class Tarefa32 : AppCompatActivity() {
         startActivity(intent)
       }
     }
+  override fun onSupportNavigateUp(): Boolean {
+    val intent = Intent(this, MainActivity::class.java)
+    startActivity(intent)
+    finish()
+    return true
+  }
 }

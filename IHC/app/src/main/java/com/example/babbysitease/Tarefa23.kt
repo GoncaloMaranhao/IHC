@@ -22,6 +22,7 @@ class Tarefa23 : AppCompatActivity() {
 
         val navView: BottomNavigationView = binding.navView
 
+
         val navController = findNavController(R.id.nav_host_fragment_activity_tarefa23)
 
         val appBarConfiguration = AppBarConfiguration(
@@ -31,6 +32,26 @@ class Tarefa23 : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+      navView.setOnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+          R.id.navigation_home -> {
+            val intent = Intent(this, Tarefa32::class.java)
+            startActivity(intent)
+            true
+          }
+          R.id.navigation_dashboard -> {
+            navController.navigate(R.id.navigation_dashboard)
+            true
+          }
+          R.id.navigation_notifications -> {
+            navController.navigate(R.id.navigation_notifications)
+            true
+          }
+          else -> false
+        }
+      }
+
 
       supportActionBar?.apply {
         title = "Allergies"

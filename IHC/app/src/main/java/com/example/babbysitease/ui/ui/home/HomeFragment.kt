@@ -16,6 +16,7 @@ private var _binding: FragmentHomeBinding? = null
   // onDestroyView.
   private val binding get() = _binding!!
 
+
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
@@ -34,8 +35,11 @@ private var _binding: FragmentHomeBinding? = null
     return root
   }
 
+
+
 override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

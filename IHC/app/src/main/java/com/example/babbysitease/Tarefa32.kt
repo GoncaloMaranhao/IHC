@@ -1,6 +1,5 @@
 package com.example.babbysitease
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -43,6 +42,11 @@ class Tarefa32 : AppCompatActivity() {
         val intent = Intent(this, Tarefa33::class.java)
         startActivity(intent)
       }
+      binding.btnClientsInformation.setOnClickListener {
+        val intent = Intent(this, Tarefa21::class.java)
+        startActivity(intent)
+      }
+
 
     }
 }

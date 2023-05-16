@@ -54,7 +54,7 @@
         android:ems="10"
         android:inputType="text"
         android:minHeight="48dp"
-        android:text="Family Carvalho"
+        android:text="Press Select Client Button"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

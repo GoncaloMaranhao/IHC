@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -60,6 +61,12 @@ class Tarefa11 : AppCompatActivity() {
                 else -> false
             }
         }
+
+      val calendarView = binding.calendarView
+
+      calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
+        Toast.makeText(this, "$dayOfMonth/${month+1}/$year Selected", Toast.LENGTH_LONG).show()
+      }
 
         binding.btnScheduleAppointment.setOnClickListener {
             val intent = Intent(this, Tarefa12::class.java)

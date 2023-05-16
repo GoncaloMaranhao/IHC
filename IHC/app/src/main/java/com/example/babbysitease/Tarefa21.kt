@@ -18,6 +18,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import java.util.Locale
+import android.widget.Toast
+import android.widget.CalendarView
+
 
 class Tarefa21 : AppCompatActivity() {
 
@@ -109,7 +112,6 @@ class Tarefa21 : AppCompatActivity() {
           return false
         }
       })
-
     }
 
   override fun onSupportNavigateUp(): Boolean {

@@ -46,7 +46,7 @@ class Tarefa15 : AppCompatActivity(), OnClickListener {
 
                 R.id.navigation_dashboard -> {
                     navController.navigate(R.id.navigation_dashboard)
-                    val intent = Intent(this, Tarefa32::class.java)
+                    val intent = Intent(this, Tarefa11::class.java)
                     startActivity(intent)
                     true
                 }
@@ -67,12 +67,12 @@ class Tarefa15 : AppCompatActivity(), OnClickListener {
             setDisplayHomeAsUpEnabled(true)
         }
 
-        findViewById<Button>(R.id.scheduleAnAppointmentButton).setOnClickListener(this)
+        findViewById<Button>(R.id.btnSheduleAppointment).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.scheduleAnAppointmentButton -> {
+            R.id.btnSheduleAppointment -> {
                 val intent = Intent(this, Tarefa11::class.java)
                 startActivity(intent)
             }
@@ -80,5 +80,10 @@ class Tarefa15 : AppCompatActivity(), OnClickListener {
         }
     }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        val intent = Intent(this, Tarefa32::class.java)
+        startActivity(intent)
+        finish()
+        return true
+    }
 }

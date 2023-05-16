@@ -42,7 +42,7 @@ class Tarefa25 : AppCompatActivity() {
           }
           R.id.navigation_dashboard -> {
             navController.navigate(R.id.navigation_dashboard)
-            val intent = Intent(this, Tarefa32::class.java)
+            val intent = Intent(this, Tarefa11::class.java)
             startActivity(intent)
             true
           }

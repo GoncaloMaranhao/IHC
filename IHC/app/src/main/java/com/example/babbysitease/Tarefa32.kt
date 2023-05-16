@@ -40,6 +40,10 @@ class Tarefa32 : AppCompatActivity() {
         val intent = Intent(this, Tarefa33::class.java)
         startActivity(intent)
       }
+      binding.btnWorkSchedule.setOnClickListener {
+        val intent = Intent(this, Tarefa11::class.java)
+        startActivity(intent)
+      }
       binding.btnClientsInformation.setOnClickListener {
         val intent = Intent(this, Tarefa21::class.java)
         startActivity(intent)
@@ -53,7 +57,7 @@ class Tarefa32 : AppCompatActivity() {
           }
           R.id.navigation_dashboard -> {
             navController.navigate(R.id.navigation_dashboard)
-            val intent = Intent(this, Tarefa32::class.java)
+            val intent = Intent(this, Tarefa11::class.java)
             startActivity(intent)
             true
           }

@@ -12,7 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.babbysitease.databinding.ActivityTarefa11Binding
 
-class Tarefa11 : AppCompatActivity(), OnClickListener {
+class Tarefa11 : AppCompatActivity() {
 
     private lateinit var binding: ActivityTarefa11Binding
 
@@ -45,7 +45,7 @@ class Tarefa11 : AppCompatActivity(), OnClickListener {
 
                 R.id.navigation_dashboard -> {
                     navController.navigate(R.id.navigation_dashboard)
-                    val intent = Intent(this, Tarefa32::class.java)
+                    val intent = Intent(this, Tarefa11::class.java)
                     startActivity(intent)
                     true
                 }
@@ -61,19 +61,21 @@ class Tarefa11 : AppCompatActivity(), OnClickListener {
             }
         }
 
+        binding.btnSheduleAppointment.setOnClickListener {
+            val intent = Intent(this, Tarefa12::class.java)
+            startActivity(intent)
+        }
+
         supportActionBar?.apply {
             title = "Schedule"
             setDisplayHomeAsUpEnabled(true)
         }
     }
 
-    override fun onClick(view: View?) {
-        when (view?.id) {
-            R.id.scheduleAnAppointmentButton -> {
-                val intent = Intent(this, Tarefa12::class.java)
-                startActivity(intent)
-            }
-            else -> {}
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        val intent = Intent(this, Tarefa32::class.java)
+        startActivity(intent)
+        finish()
+        return true
     }
 }

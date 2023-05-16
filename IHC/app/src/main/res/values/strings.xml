@@ -19,6 +19,8 @@
     <string name="title_activity_tarefa34">Tarefa34</string>
     <string name="title_activity_tarefa35">Tarefa35</string>
     <string name="title_activity_tarefa11">Tarefa11</string>
+    <string name="title_activity_tarefa12">Tarefa12</string>
+    <string name="title_activity_tarefa13">Tarefa13</string>
     <string name="title_activity_tarefa14">Tarefa14</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

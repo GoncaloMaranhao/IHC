@@ -61,7 +61,7 @@ class Tarefa11 : AppCompatActivity() {
             }
         }
 
-        binding.btnSheduleAppointment.setOnClickListener {
+        binding.btnScheduleAppointment.setOnClickListener {
             val intent = Intent(this, Tarefa12::class.java)
             startActivity(intent)
         }

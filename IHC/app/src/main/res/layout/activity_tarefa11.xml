@@ -72,7 +72,7 @@
             android:textIsSelectable="false" />
 
         <Button
-            android:id="@+id/btnSheduleAppointment"
+            android:id="@+id/btnScheduleAppointment"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"

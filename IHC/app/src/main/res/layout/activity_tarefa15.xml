@@ -34,6 +34,7 @@
     <RelativeLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,79 +50,74 @@
             android:layout_marginRight="0dp"
             android:background="@color/white" />
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clientAna"
             android:layout_width="match_parent"
-            android:layout_height="97dp"
+            android:layout_height="134dp"
             android:layout_below="@+id/calendarView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="31dp"
             android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp">
+            android:layout_marginRight="0dp"
+            android:padding="8dp">
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="112dp"
+                android:id="@+id/scheduleTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="279dp"
-                android:layout_marginRight="279dp"
-                android:layout_marginBottom="67dp"
-                android:text="João/Sofia"
+                android:text="Family Carvalho"
                 android:textColor="@color/white"
-                android:textIsSelectable="false"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="142dp"
-                android:layout_marginRight="142dp"
-                android:layout_marginBottom="11dp"
-                android:text="Address: Av. Lourenço Peixinho, 53"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="OLA"
+                android:src="@drawable/girl1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleTitle" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/clientInfoButton"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="318dp"
-                android:layout_marginRight="318dp"
-                android:layout_marginBottom="41dp"
-                android:text="Child: Ana"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="start|center_vertical"
+                android:text="Child: Ana Carvalho \n Parents: João / Sofia\nHour: 09:00-14:00"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
-        </RelativeLayout>
+                android:textSize="16sp"
+                android:enabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="@id/imageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/btnSheduleAppointment"
+            android:id="@+id/btnScheduleAppointment"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_alignBottom="@+id/calendarView"
+            android:layout_below="@+id/clientAna"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="129dp"
-            android:layout_marginLeft="129dp"
-            android:layout_marginTop="129dp"
-            android:layout_marginEnd="120dp"
-            android:layout_marginRight="120dp"
-            android:layout_marginBottom="-349dp"
+            android:layout_marginStart="121dp"
+            android:layout_marginLeft="121dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginRight="128dp"
             android:text="Schedule an Appointment" />
-
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

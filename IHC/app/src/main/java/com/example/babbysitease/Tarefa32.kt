@@ -48,6 +48,10 @@ class Tarefa32 : AppCompatActivity() {
         val intent = Intent(this, Tarefa21::class.java)
         startActivity(intent)
       }
+      binding.btnLogout.setOnClickListener {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+      }
       navView.setOnNavigationItemSelectedListener { item ->
         when (item.itemId) {
           R.id.navigation_home -> {

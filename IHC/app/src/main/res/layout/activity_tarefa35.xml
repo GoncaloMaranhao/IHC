@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/container"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:paddingTop="?attr/actionBarSize"
-  android:windowSoftInputMode="adjustResize">
+  android:windowSoftInputMode="adjustResize"
+  android:background="@drawable/gradient_background">
 
   <com.google.android.material.bottomnavigation.BottomNavigationView
     android:id="@+id/nav_view"
@@ -35,9 +37,21 @@
   <RelativeLayout
     android:id="@+id/user_message_container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="-200dp"
+    android:layout_height="match_parent"
+    android:layout_marginTop="450dp"
     app:layout_constraintTop_toBottomOf="@id/nav_host_fragment_activity_tarefa35">
+
+    <TextView
+      android:id="@+id/user_message_day"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="May 16th"
+      android:textSize="12sp"
+      android:textColor="@android:color/darker_gray"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentLeft="true" />
+
+
 
     <TextView
       android:id="@+id/user_message_text"
@@ -46,9 +60,11 @@
       android:layout_marginStart="16dp"
       android:layout_marginEnd="16dp"
       android:text="A Catarina gostou muito \n de almoçar panquecas!"
-      android:backgroundTint="@color/white"
+      android:background="@color/topBar"
+      android:textColor="@android:color/white"
       android:textSize="16sp"
       android:padding="8dp"
+      android:layout_below="@id/user_message_day"
       android:layout_alignParentEnd="true"
       android:layout_alignParentRight="true" />
 
@@ -74,6 +90,8 @@
     app:layout_constraintBottom_toBottomOf="parent"
     android:gravity="bottom">
 
+
+
     <EditText
       android:id="@+id/message_input"
       android:layout_width="0dp"
@@ -88,7 +106,9 @@
       android:drawablePadding="8dp"
       android:inputType="textMultiLine"
       android:layout_marginRight="8dp"
-      android:gravity="start|bottom" />
+      android:gravity="start|bottom"
+      android:textColorHint="@color/white"
+      android:textColor="@android:color/white"/>
 
     <Button
       android:id="@+id/sendbutton"
@@ -101,6 +121,8 @@
       android:layout_alignBottom="@id/message_input" />
 
   </RelativeLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

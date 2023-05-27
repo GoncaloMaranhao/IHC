@@ -41,51 +41,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:background="@color/white" />
+      <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/currentMonthCalendarView"
+        android:layout_width="match_parent"
+        app:mcv_arrowColor="@color/gold"
+        app:mcv_headerTextAppearance="@style/CalendarWidgetHeader"
+        app:mcv_weekDayTextAppearance="@style/CalendarWidgetHeader"
+        app:mcv_selectionColor="@color/blue"
+        app:mcv_dateTextAppearance="@style/CalendarWidgetHeader"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
 
-        <TextView
-            android:id="@+id/textView"
-            style="@android:style/Widget.DeviceDefault.Light.TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="33dp"
-            android:layout_below="@+id/calendarView"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="125dp"
-            android:layout_marginEnd="98dp"
-            android:layout_marginRight="98dp"
-            android:gravity="center"
-            android:text="No appointments Scheduled"
-            android:textColor="@color/white"
-            android:textIsSelectable="false" />
-
-        <Button
-            android:id="@+id/btnScheduleAppointment"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="124dp"
-            android:layout_marginLeft="124dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="125dp"
-            android:layout_marginRight="125dp"
-            android:text="Schedule an Appointment" />
+      <TextView
+        android:id="@+id/selectDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentMonthCalendarView"
+        android:layout_centerHorizontal="true"
+        android:text="Please Select a Date to add or view your appointments"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

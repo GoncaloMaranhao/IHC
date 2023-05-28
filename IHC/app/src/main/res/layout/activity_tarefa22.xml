@@ -237,14 +237,6 @@
                 android:background="@drawable/baseline_rectangle_24"
                 android:text="+Add topic" />
 
-            <Button
-                android:id="@+id/saveChangesButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/baseline_rectangle_24"
-                android:text="Save Changes" />
-
         </LinearLayout>
 
     </ScrollView>

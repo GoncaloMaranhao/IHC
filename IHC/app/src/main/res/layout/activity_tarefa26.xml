@@ -204,20 +204,20 @@
           android:text="Favourite Activites"
           android:textColor="@color/white"
           android:textStyle="bold"
-          android:textSize="20sp" />
+          android:textSize="20sp"
+            android:drawableStart="@drawable/baseline_circle_24"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/baseline_circle_24" />
 
         <TextView
           android:id="@+id/FavouriteActivitesText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_circle_24"
-            android:drawablePadding="4dp"
           android:layout_below="@id/FavouriteActivitesLabel"
           android:layout_marginLeft="3dp"
           android:text="- Running"
           android:textColor="@color/white"
-          android:textSize="20sp"
-            android:drawableLeft="@drawable/baseline_circle_24" />
+          android:textSize="20sp" />
 
         <Button
           android:id="@+id/FavouriteActivitesAddButton"

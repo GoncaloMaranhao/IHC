@@ -84,44 +84,56 @@
                 android:layout_marginLeft="16dp">
 
                 <TextView
+                    android:id="@+id/txt_child"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:textSize="20dp"
                     android:drawableStart="@drawable/baseline_circle_24"
                     android:drawablePadding="4dp"
-                    android:text="Caregiver: Mario/Maria"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
                     android:drawableLeft="@drawable/baseline_circle_24" />
 
                 <TextView
+                    android:id="@+id/txt_caregiver"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:textSize="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
                     android:drawableStart="@drawable/baseline_circle_24"
                     android:drawablePadding="4dp"
-                    android:textColor="@color/white"
-                    android:text="Child: Mario/Maria"
                     android:drawableLeft="@drawable/baseline_circle_24" />
 
                 <TextView
+                    android:id="@+id/txt_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:drawableStart="@drawable/baseline_circle_24"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
                     android:drawablePadding="4dp"
                     android:textSize="20dp"
-                    android:text="Location: Av. Dr. Lourenço"
                     android:drawableLeft="@drawable/baseline_circle_24" />
 
                 <TextView
+                    android:id="@+id/txt_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:drawableStart="@drawable/baseline_circle_24"
                     android:drawablePadding="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
                     android:textSize="20dp"
-                    android:text="Time: 06:30-08:00"
+                    android:gravity="center"
                     android:drawableLeft="@drawable/baseline_circle_24" />
+
 
             </LinearLayout>
         </LinearLayout>

@@ -2,7 +2,9 @@ package com.example.babbysitease
 
 import android.content.Intent
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.StyleSpan
@@ -20,6 +22,7 @@ import androidx.core.content.ContextCompat
 import java.util.Locale
 import android.widget.Toast
 import android.widget.CalendarView
+import com.google.android.material.button.MaterialButton
 
 
 class Tarefa12 : AppCompatActivity() {
@@ -31,6 +34,11 @@ class Tarefa12 : AppCompatActivity() {
 
         binding = ActivityTarefa12Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val clientInfoButton5: Button = findViewById(R.id.clientInfoButton5)
+        val clientInfoButton6: Button = findViewById(R.id.clientInfoButton6)
+        val clientInfoButton7: Button = findViewById(R.id.clientInfoButton7)
+        val clientInfoButton8: Button = findViewById(R.id.clientInfoButton8)
 
         supportActionBar?.apply {
             title = "Select a client"
@@ -65,52 +73,61 @@ class Tarefa12 : AppCompatActivity() {
             }
         }
 
-        val button = findViewById<Button>(R.id.clientInfoButton2)
-        val text = "Child: Catarina Mendes \n Parents: Carlos/Sofia"
+        val button = findViewById<Button>(R.id.clientInfoButton5)
+        val text = "Child: Ana Carvalho \n" + " Caregiver: João / Sofia"
         val spannable = SpannableString(text)
         spannable.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         button.text = spannable
 
-        val button2 = findViewById<Button>(R.id.clientInfoButton)
-        val text2 = "Child: Ana Carvalho \n Parents: João/Sofia"
+        val button2 = findViewById<Button>(R.id.clientInfoButton6)
+        val text2 = "Child: Catarina Mendes \n Caregiver: Carlos"
         val spannable2 = SpannableString(text2)
         spannable2.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         button2.text = spannable2
 
+        val button3 = findViewById<Button>(R.id.clientInfoButton7)
+        val text3 = "Child: João Otávio \n Caregiver: Paulo / Susana"
+        val spannable3 = SpannableString(text3)
+        spannable3.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        button3.text = spannable3
+
+        val button4 = findViewById<Button>(R.id.clientInfoButton8)
+        val text4 = "Child: Manuel Alemida \n Caregiver: António / Sara"
+        val spannable4 = SpannableString(text4)
+        spannable4.setSpan(StyleSpan(Typeface.BOLD), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        button4.text = spannable4
+
         val client1Name = "Ana"
         val client2Name = "Catarina"
+        val client3Name = "João"
+        val client4Name = "Manuel"
 
         val firstLetter1: TextView = binding.firstLetter1
         val firstLetter2: TextView = binding.firstLetter2
+        val firstLetter3: TextView = binding.firstLetter3
+        val firstLetter4: TextView = binding.firstLetter4
 
         firstLetter1.text = client1Name.first().uppercase(Locale.getDefault())
         firstLetter2.text = client2Name.first().uppercase(Locale.getDefault())
+        firstLetter3.text = client3Name.first().uppercase(Locale.getDefault())
+        firstLetter4.text = client4Name.first().uppercase(Locale.getDefault())
 
         firstLetter1.setTextColor(ContextCompat.getColor(this, android.R.color.white))
         firstLetter2.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+        firstLetter3.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+        firstLetter4.setTextColor(ContextCompat.getColor(this, android.R.color.white))
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            clientInfoButton5.text = Html.fromHtml("<b><u>Child</b></u>: Ana Carvalho \n Caregiver: João / Sofia", Html.FROM_HTML_MODE_LEGACY)
+            clientInfoButton6.text = Html.fromHtml("<b><u>Child</b></u>: Catarina Mendes \n Caregiver: Carlos", Html.FROM_HTML_MODE_LEGACY)
+            clientInfoButton7.text = Html.fromHtml("<b><u>Child</b></u>: João Otávio \n Caregiver: Paulo / Susana", Html.FROM_HTML_MODE_LEGACY)
+            clientInfoButton8.text = Html.fromHtml("<b><u>Child</b></u>: Manuel Alemida \n Caregiver: António / Sara", Html.FROM_HTML_MODE_LEGACY)
+        }
 
-        binding.clientInfoButton.setOnClickListener {
+        binding.clientInfoButton5.setOnClickListener {
             val intent = Intent(this, Tarefa13::class.java)
             startActivity(intent)
         }
-
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText != null) {
-                    binding.clientAna.visibility = if (newText.lowercase().contains("a")) View.VISIBLE else View.GONE
-                    binding.clientCatarina.visibility = if (newText.lowercase().contains("c")) View.VISIBLE else View.GONE
-                } else {
-                    binding.clientAna.visibility = View.VISIBLE
-                    binding.clientCatarina.visibility = View.VISIBLE
-                }
-                return false
-            }
-        })
     }
 
     override fun onSupportNavigateUp(): Boolean {

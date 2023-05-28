@@ -2,6 +2,7 @@ package com.example.babbysitease
 
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.text.style.ForegroundColorSpan
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -17,6 +18,12 @@ import com.prolificinteractive.materialcalendarview.DayViewDecorator
 import com.prolificinteractive.materialcalendarview.DayViewFacade
 import com.prolificinteractive.materialcalendarview.spans.DotSpan
 import java.util.Calendar
+import android.os.Handler
+import android.os.Looper
+import android.text.Html
+import android.view.Gravity
+import android.widget.TextView
+import android.widget.Toast
 
 class Tarefa14 : AppCompatActivity() {
 
@@ -27,6 +34,24 @@ class Tarefa14 : AppCompatActivity() {
 
         binding = ActivityTarefa14Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val txtChild: TextView = findViewById(R.id.txt_child)
+        val txtCaregiver: TextView = findViewById(R.id.txt_caregiver)
+        val txtLocation: TextView = findViewById(R.id.txt_location)
+        val txtTime: TextView = findViewById(R.id.txt_time)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            txtChild.text = Html.fromHtml("<b><u>Child:</u></b> Ana Carvalho", Html.FROM_HTML_MODE_LEGACY)
+            txtCaregiver.text = Html.fromHtml("<b><u>Caregiver:</u></b> João/Sofia", Html.FROM_HTML_MODE_LEGACY)
+            txtLocation.text = Html.fromHtml("<b><u>Location:</u></b> \nAv. Dr. Lourenço Peixinho nº33", Html.FROM_HTML_MODE_LEGACY)
+            txtTime.text = Html.fromHtml("<b><u>Time:</u></b> 06:30 - 08:00", Html.FROM_HTML_MODE_LEGACY)
+        } else {
+            txtChild.text = Html.fromHtml("<b><u>Child:</u></b> Ana Carvalho")
+            txtCaregiver.text = Html.fromHtml("<b><u>Caregiver:</u></b> João/Sofia")
+            txtLocation.text = Html.fromHtml("<b><u>Location:</u></b> \nAv. Dr. Lourenço Peixinho nº33")
+            txtTime.text = Html.fromHtml("<b><u>Time:</u></b> 06:30 - 08:00")
+        }
+
 
         val navView: BottomNavigationView = binding.navView
 
@@ -64,6 +89,22 @@ class Tarefa14 : AppCompatActivity() {
                 else -> false
             }
         }
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val inflater = layoutInflater
+            val layout = inflater.inflate(R.layout.toast_layout,
+                findViewById(R.id.toast_layout_root))
+
+            val text = layout.findViewById<TextView>(R.id.text)
+            text.text = "Appointment made"
+
+            with (Toast(this)) {
+                setGravity(Gravity.BOTTOM, 0, 300)
+                duration = Toast.LENGTH_LONG
+                view = layout
+                show()
+            }
+        }, 300)
 
         supportActionBar?.apply {
             title = "Appointments made"

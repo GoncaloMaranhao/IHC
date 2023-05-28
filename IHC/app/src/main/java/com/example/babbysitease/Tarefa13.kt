@@ -3,7 +3,9 @@ package com.example.babbysitease
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
@@ -16,6 +18,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.babbysitease.databinding.ActivityTarefa12Binding
 import android.view.inputmethod.EditorInfo
+import android.widget.TextView
 import com.example.babbysitease.databinding.ActivityTarefa13Binding
 import com.google.android.material.textfield.TextInputEditText
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
@@ -34,6 +37,21 @@ class Tarefa13 : AppCompatActivity() {
 
         binding = ActivityTarefa13Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val clientTextView: TextView = findViewById(R.id.clientTextView)
+        val clientTextView2: TextView = findViewById(R.id.clientTextView2)
+        val clientTextView3: TextView = findViewById(R.id.clientTextView3)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            clientTextView.text = Html.fromHtml("<b><u>Caregiver</u></b>", Html.FROM_HTML_MODE_LEGACY)
+            clientTextView2.text = Html.fromHtml("<b><u>Child</u></b>", Html.FROM_HTML_MODE_LEGACY)
+            clientTextView3.text = Html.fromHtml("<b><u>Location</u></b>", Html.FROM_HTML_MODE_LEGACY)
+        } else {
+            clientTextView.text = Html.fromHtml("<b><u>Caregiver</u></b>")
+            clientTextView2.text = Html.fromHtml("<b><u>Child</u></b>")
+            clientTextView3.text = Html.fromHtml("<b><u>Location</u></b>")
+        }
+
 
         val navView = binding.navView
 

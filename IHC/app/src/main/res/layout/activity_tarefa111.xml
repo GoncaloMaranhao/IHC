@@ -87,12 +87,21 @@
         android:background="@drawable/outline_circle_24_red"
         android:text="31"
         android:textSize="20sp" />
-    </LinearLayout>
 
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/currentMonthCalendarView"
+        android:background="@color/sky_blue" />
     <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="No appointments added"
+      android:text="No appointments at May 31"
       android:textColor="@color/white"
       android:textSize="18sp"
       android:layout_marginTop="40dp"

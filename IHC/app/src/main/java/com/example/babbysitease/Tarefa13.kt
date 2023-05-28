@@ -1,5 +1,6 @@
 package com.example.babbysitease
 
+import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -16,8 +17,12 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.babbysitease.databinding.ActivityTarefa12Binding
 import android.view.inputmethod.EditorInfo
 import com.example.babbysitease.databinding.ActivityTarefa13Binding
+import com.google.android.material.textfield.TextInputEditText
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 import kotlin.math.roundToInt
 
 class Tarefa13 : AppCompatActivity() {
@@ -64,6 +69,36 @@ class Tarefa13 : AppCompatActivity() {
             }
         }
 
+        val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+
+        val startTimeEditText: TextInputEditText = findViewById(R.id.startTimeEditText)
+        val endTimeEditText: TextInputEditText = findViewById(R.id.endTimeEditText)
+
+        val startTimeListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            val selectedTime = Calendar.getInstance()
+            selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
+            selectedTime.set(Calendar.MINUTE, minute)
+            startTimeEditText.setText(timeFormat.format(selectedTime.time))
+        }
+
+        val endTimeListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            val selectedTime = Calendar.getInstance()
+            selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
+            selectedTime.set(Calendar.MINUTE, minute)
+            endTimeEditText.setText(timeFormat.format(selectedTime.time))
+        }
+
+        startTimeEditText.setOnClickListener {
+            val now = Calendar.getInstance()
+            TimePickerDialog(this, startTimeListener, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true).show()
+        }
+
+        endTimeEditText.setOnClickListener {
+            val now = Calendar.getInstance()
+            TimePickerDialog(this, endTimeListener, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true).show()
+        }
+
+
 
         //binding.saveButton.setOnClickListener {
         //    val intent = Intent(this, Tarefa25::class.java)
@@ -71,7 +106,7 @@ class Tarefa13 : AppCompatActivity() {
         //}
 
         supportActionBar?.apply {
-            title = "Save Appointment"
+            title = "Set Appointment"
             setDisplayHomeAsUpEnabled(true)
         }
     }

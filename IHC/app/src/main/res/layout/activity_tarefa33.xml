@@ -84,6 +84,7 @@
           android:layout_marginStart="8dp"
           android:layout_marginLeft="8dp"
           android:drawableLeft="@drawable/baseline_chat_24"
+            android:background="@drawable/baseline_rectangle_24"
           android:gravity="start|center_vertical"
           android:text="Child: Ana \n Parents: João/Sofia"
           android:textSize="16sp"
@@ -152,6 +153,7 @@
             android:drawableLeft="@drawable/baseline_chat_24"
             android:gravity="start|center_vertical"
             android:text="Child: Catarina \n Parents: Carlos/Sofia"
+              android:background="@drawable/baseline_rectangle_24"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imageButton2" />

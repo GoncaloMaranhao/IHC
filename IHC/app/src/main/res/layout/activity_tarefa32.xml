@@ -82,6 +82,7 @@
       android:layout_marginEnd="16dp"
       android:layout_weight="1"
       android:text="Work Schedule"
+        android:background="@drawable/baseline_rectangle_24"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_calendar_month_24"/>
 
@@ -91,6 +92,7 @@
       android:layout_height="wrap_content"
       android:layout_below="@id/btn_work_schedule"
       android:layout_centerHorizontal="true"
+        android:background="@drawable/baseline_rectangle_24"
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
@@ -107,6 +109,7 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
+        android:background="@drawable/baseline_rectangle_24"
       android:layout_weight="1"
       android:text="Conversations"
       android:textSize="20dp"
@@ -121,8 +124,9 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
+        android:background="@drawable/baseline_rectangle_24"
       android:layout_weight="1"
-      android:text="Profile Information"
+      android:text="Settings"
       android:textSize="20dp"
       android:drawableLeft="@drawable/baseline_info_24"/>
 
@@ -133,6 +137,7 @@
       android:layout_below="@id/btn_profinfo"
       android:layout_centerHorizontal="true"
       android:layout_marginStart="16dp"
+        android:background="@drawable/baseline_rectangle_24"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
       android:layout_weight="1"

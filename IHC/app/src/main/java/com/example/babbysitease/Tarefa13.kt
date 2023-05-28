@@ -43,12 +43,12 @@ class Tarefa13 : AppCompatActivity() {
         val clientTextView3: TextView = findViewById(R.id.clientTextView3)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            clientTextView.text = Html.fromHtml("<b><u>Caregiver</u></b>", Html.FROM_HTML_MODE_LEGACY)
-            clientTextView2.text = Html.fromHtml("<b><u>Child</u></b>", Html.FROM_HTML_MODE_LEGACY)
+            clientTextView.text = Html.fromHtml("<b><u>Child</u></b>", Html.FROM_HTML_MODE_LEGACY)
+            clientTextView2.text = Html.fromHtml("<b><u>Caregiver</u></b>", Html.FROM_HTML_MODE_LEGACY)
             clientTextView3.text = Html.fromHtml("<b><u>Location</u></b>", Html.FROM_HTML_MODE_LEGACY)
         } else {
-            clientTextView.text = Html.fromHtml("<b><u>Caregiver</u></b>")
-            clientTextView2.text = Html.fromHtml("<b><u>Child</u></b>")
+            clientTextView.text = Html.fromHtml("<b><u>Child</u></b>")
+            clientTextView2.text = Html.fromHtml("<b><u>Caregiver</u></b>")
             clientTextView3.text = Html.fromHtml("<b><u>Location</u></b>")
         }
 

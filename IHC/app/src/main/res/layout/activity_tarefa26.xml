@@ -95,10 +95,13 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textColor="@color/white"
+            android:drawableStart="@drawable/baseline_circle_24"
+            android:drawablePadding="4dp"
           android:layout_marginLeft="8dp"
 
           android:text="Parents: João Carvalho \n                Sofia Sousa"
-          android:textSize="20sp" />
+          android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_circle_24" />
 
         <Button
           android:id="@+id/chatButton"
@@ -106,7 +109,7 @@
           android:layout_height="wrap_content"
           android:layout_alignParentEnd="true"
           android:layout_alignParentRight="true"
-          android:layout_marginRight="90dp"
+          android:layout_marginRight="75dp"
             android:background="@drawable/baseline_rectangle_24"
           android:text="Chat" />
 
@@ -132,8 +135,11 @@
           android:textColor="@color/white"
           android:layout_marginLeft="7dp"
           android:text="Allergies"
+            android:drawableStart="@drawable/baseline_circle_24"
+            android:drawablePadding="4dp"
           android:textStyle="bold"
-          android:textSize="20sp" />
+          android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_circle_24" />
 
         <TextView
           android:id="@+id/allergiesText"
@@ -204,11 +210,14 @@
           android:id="@+id/FavouriteActivitesText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_circle_24"
+            android:drawablePadding="4dp"
           android:layout_below="@id/FavouriteActivitesLabel"
           android:layout_marginLeft="3dp"
           android:text="- Running"
           android:textColor="@color/white"
-          android:textSize="20sp" />
+          android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_circle_24" />
 
         <Button
           android:id="@+id/FavouriteActivitesAddButton"

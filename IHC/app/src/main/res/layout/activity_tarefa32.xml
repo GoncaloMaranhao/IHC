@@ -44,7 +44,7 @@
       android:id="@+id/imageview_profile"
       android:layout_width="100dp"
       android:layout_height="100dp"
-      android:src="@drawable/bea"
+      android:src="@drawable/beatriz"
       android:layout_centerHorizontal="true"
       />
 
@@ -52,7 +52,7 @@
       android:id="@+id/profile_name"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Beatriz Silva"
+      android:text="Beatriz Almeida"
       android:textColor="@color/white"
       android:layout_below="@+id/imageview_profile"
       android:layout_centerHorizontal="true"

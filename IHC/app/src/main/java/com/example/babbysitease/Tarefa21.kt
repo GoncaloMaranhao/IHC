@@ -29,12 +29,11 @@ class Tarefa21 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-      binding = ActivityTarefa21Binding.inflate(layoutInflater)
+        binding = ActivityTarefa21Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.apply {
-            title = "Clients"
+            title = "Select a client"
             setDisplayHomeAsUpEnabled(true)
         }
 

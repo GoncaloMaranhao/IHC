@@ -62,7 +62,7 @@ class Tarefa11_1 : AppCompatActivity() {
 
       val addAppointmentButton: Button = findViewById(R.id.add_appointment_button)
       addAppointmentButton.setOnClickListener {
-        val intent = Intent(this, Tarefa13::class.java)
+        val intent = Intent(this, Tarefa12::class.java)
         startActivity(intent)
       }
     }

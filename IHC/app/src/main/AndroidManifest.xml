@@ -13,14 +13,6 @@
         android:theme="@style/Theme.BabbySitEase"
         tools:targetApi="31">
         <activity
-            android:name=".Tarefa11_1"
-            android:exported="false"
-            android:label="@string/title_activity_tarefa111" />
-        <activity
-            android:name=".Tarefa15"
-            android:exported="false"
-            android:label="@string/title_activity_tarefa15" />
-        <activity
             android:name=".Tarefa13"
             android:exported="false"
             android:label="@string/title_activity_tarefa13" />
@@ -29,14 +21,17 @@
             android:exported="false"
             android:label="@string/title_activity_tarefa12" />
         <activity
+            android:name=".ui.Tarefa12"
+            android:exported="false"
+            android:label="@string/title_activity_tarefa12" />
+        <activity
+            android:name=".Tarefa11_1"
+            android:exported="false"
+            android:label="@string/title_activity_tarefa111" />
+        <activity
             android:name=".Tarefa11"
             android:exported="false"
             android:label="@string/title_activity_tarefa11" />
-        <activity
-            android:name=".Tarefa14"
-            android:exported="false"
-            android:label="@string/title_activity_tarefa14"
-            android:theme="@style/Theme.BabbySitEase" />
         <activity
             android:name=".Tarefa35"
             android:exported="false"

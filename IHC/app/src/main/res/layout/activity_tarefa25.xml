@@ -65,6 +65,14 @@
           android:text="Ana's parents communicated to me that she has a severe allergy to peanuts, I must take care with regard to the food that I prepare for her"
           android:textSize="18sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/sky_blue" />
+
       </LinearLayout>
 
       <ImageView
@@ -107,6 +115,14 @@
           android:text="No description"
           android:textColor="@color/white"
           android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/sky_blue" />
       </LinearLayout>
 
 
@@ -151,6 +167,14 @@
           android:text="No description"
           android:textColor="@color/white"
           android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/sky_blue" />
       </LinearLayout>
 
       <ImageView

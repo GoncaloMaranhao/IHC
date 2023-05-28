@@ -69,6 +69,9 @@ class Tarefa13 : AppCompatActivity() {
             }
         }
 
+        val now = Calendar.getInstance()
+
+
         val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
 
         val startTimeEditText: TextInputEditText = findViewById(R.id.startTimeEditText)
@@ -90,20 +93,26 @@ class Tarefa13 : AppCompatActivity() {
 
         startTimeEditText.setOnClickListener {
             val now = Calendar.getInstance()
-            TimePickerDialog(this, startTimeListener, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true).show()
+            TimePickerDialog(this, R.style.themeOnverlay_timePicker, startTimeListener, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true).show()
         }
 
         endTimeEditText.setOnClickListener {
             val now = Calendar.getInstance()
-            TimePickerDialog(this, endTimeListener, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true).show()
+            TimePickerDialog(this, R.style.themeOnverlay_timePicker, endTimeListener, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true).show()
         }
 
+        val hours = now.get(Calendar.HOUR_OF_DAY)
+        val minutes = now.get(Calendar.MINUTE)
+        val timePickerDialog = TimePickerDialog(this,
+            R.style.themeOnverlay_timePicker,
+            startTimeListener,
+            hours,minutes,true)
 
 
-        //binding.saveButton.setOnClickListener {
-        //    val intent = Intent(this, Tarefa25::class.java)
-        //    startActivity(intent)
-        //}
+        binding.setAppointmentButton.setOnClickListener {
+            val intent = Intent(this, Tarefa14::class.java)
+            startActivity(intent)
+        }
 
         supportActionBar?.apply {
             title = "Set Appointment"
@@ -111,7 +120,7 @@ class Tarefa13 : AppCompatActivity() {
         }
     }
     override fun onSupportNavigateUp(): Boolean {
-        val intent = Intent(this, Tarefa23::class.java)
+        val intent = Intent(this, Tarefa12::class.java)
         startActivity(intent)
         finish()
         return true

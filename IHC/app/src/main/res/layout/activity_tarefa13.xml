@@ -1,11 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    android:paddingTop="?attr/actionBarSize">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:layout_marginTop="60dp"
+        android:paddingTop="?attr/actionBarSize">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -31,17 +36,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation13" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageview_profile"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/bea"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/appointmentDescriptionTextView"
         android:layout_width="wrap_content"
@@ -57,9 +51,11 @@
         android:id="@+id/monthTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="16dp"
         android:text="Appointment details"
         android:textColor="@color/white"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageview_profile" />
 
@@ -70,6 +66,13 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1" />
+
 
     <EditText
         android:id="@+id/appointmentDescriptionEditText"
@@ -77,12 +80,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:hint="(Optional) ..."
-        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="(Optional) Write details here..."
+        android:textColorHint="@color/white_transparent"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appointmentDescriptionTextView" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/sky_blue"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentDescriptionEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/clientTextView"
@@ -187,7 +203,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         android:gravity="center_horizontal" />
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/startTimeInputLayout"
         android:layout_width="0dp"
@@ -205,6 +220,7 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             android:inputType="none"
+            android:layout_marginBottom="10dp"
             android:hint="Start" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -226,6 +242,7 @@
             android:layout_height="wrap_content"
             android:inputType="none"
             android:hint="End"
+            android:layout_marginBottom="10dp"
             android:focusable="false"
             />
 
@@ -244,6 +261,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/nav_view" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageview_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="150dp"
+        android:src="@drawable/girl1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>

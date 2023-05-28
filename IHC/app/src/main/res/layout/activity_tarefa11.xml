@@ -53,13 +53,22 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/currentMonthCalendarView"
+            android:background="@color/sky_blue" />
+
       <TextView
         android:id="@+id/selectDateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/currentMonthCalendarView"
         android:layout_centerHorizontal="true"
-        android:text="Please Select a Date to add or view your appointments"
+        android:text="Please Select a Date to ADD or VIEW your appointments"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginTop="20dp"

@@ -97,4 +97,5 @@
     <color name="gold123">#FFC107</color>
     <color name="topBar">#07393C</color>
     <color name="topBar2">#F0EDEE</color>
+    <color name="white_transparent">#80FFFFFF</color>
 </resources>

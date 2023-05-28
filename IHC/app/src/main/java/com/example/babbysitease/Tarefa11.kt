@@ -70,7 +70,9 @@ class Tarefa11 : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
         }
 
-      val currentMonthCalendarView: MaterialCalendarView = findViewById(R.id.currentMonthCalendarView)
+        val highlightDays = setOf(4, 5, 6, 12, 13, 14, 15, 22, 23, 17, 25, 26, 28)
+
+        val currentMonthCalendarView: MaterialCalendarView = findViewById(R.id.currentMonthCalendarView)
 
 
       val currentDate = Calendar.getInstance()
@@ -79,15 +81,13 @@ class Tarefa11 : AppCompatActivity() {
 
       setupCalendar(currentMonthCalendarView, currentDate)
 
-
-      val selectedDaysDecorator = object : DayViewDecorator {
-        override fun shouldDecorate(day: CalendarDay): Boolean {
-          // You can customize the condition of the days you want to highlight
-          return day.calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY
-        }
+        val selectedDaysDecorator = object : DayViewDecorator {
+            override fun shouldDecorate(day: CalendarDay): Boolean {
+                return day.day in highlightDays
+            }
 
         override fun decorate(view: DayViewFacade) {
-          view.addSpan(DotSpan(5f, Color.RED)) // You can customize the indicator
+          view.addSpan(DotSpan(5f, Color.RED))
         }
 
       }

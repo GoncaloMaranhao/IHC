@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    android:paddingTop="?attr/actionBarSize"
+    android:background="@drawable/gradient_background">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -28,6 +30,103 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation14" />
+        app:navGraph="@navigation/mobile_navigation8" />
+
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/currentMonthCalendarView"
+            android:layout_width="match_parent"
+            app:mcv_arrowColor="@color/gold"
+            app:mcv_headerTextAppearance="@style/CalendarWidgetHeader"
+            app:mcv_weekDayTextAppearance="@style/CalendarWidgetHeader"
+            app:mcv_selectionColor="@color/blue"
+            app:mcv_dateTextAppearance="@style/CalendarWidgetHeader"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <View
+            android:id="@+id/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/currentMonthCalendarView"
+            android:background="@color/sky_blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/girl1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:drawableStart="@drawable/baseline_circle_24"
+                    android:drawablePadding="4dp"
+                    android:text="Caregiver: Mario/Maria"
+                    android:drawableLeft="@drawable/baseline_circle_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:drawableStart="@drawable/baseline_circle_24"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/white"
+                    android:text="Child: Mario/Maria"
+                    android:drawableLeft="@drawable/baseline_circle_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/baseline_circle_24"
+                    android:drawablePadding="4dp"
+                    android:textSize="20dp"
+                    android:text="Location: Av. Dr. Lourenço"
+                    android:drawableLeft="@drawable/baseline_circle_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/baseline_circle_24"
+                    android:drawablePadding="4dp"
+                    android:textSize="20dp"
+                    android:text="Time: 06:30-08:00"
+                    android:drawableLeft="@drawable/baseline_circle_24" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

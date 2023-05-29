@@ -190,14 +190,6 @@
       android:background="#000"
       android:layout_marginTop="16dp"/>
 
-    <Button
-      android:id="@+id/AddNewInformationButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Add New Information"
-        android:background="@drawable/baseline_rectangle_24"
-      android:layout_marginTop="16dp"/>
-
   </LinearLayout>
 
   <Button

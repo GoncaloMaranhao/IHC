@@ -1,0 +1,1 @@
+O prototipo em papel foi apresentado aos avaliadores sem os "rabiscos" que estão nestas fotos, infelizmente só tiramos fotos depois de fazer pequenas alterações imediatamente a seguir ao feedback dos avaliadores.
